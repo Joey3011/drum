@@ -160,7 +160,7 @@ const firstSoundsGroup = [
   
   const DrumControl = ({ stop, name, power, volume, handleVolumeChange, changeSoundGroup }) => (
     <div className="control">
-      <motion.button whileTap={{scale: 1.025}} className='btn-control px-3' onClick={stop}><small>Sound On/Off</small> {power ? 'OFF' : 'ON'}</motion.button>
+      <motion.button whileTap={{scale: 1.025}} className='btn-control px-4' onClick={stop}><small>Sound</small> {power ? 'OFF' : 'ON'}</motion.button>
       <small className='fw-bold'>Volume: {Math.round(volume * 100)}%</small>
       <input
         max="1"
@@ -171,7 +171,7 @@ const firstSoundsGroup = [
         onChange={handleVolumeChange}
         />
       <small className='fw-bold' id="display" >{name}</small>
-      <button className='btn-control px-3' onClick={changeSoundGroup}><small>Music Option</small></button>
+      <button className='btn-control px-4' onClick={changeSoundGroup}><small>Music Option</small></button>
     </div>
   );
 
