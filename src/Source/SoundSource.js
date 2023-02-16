@@ -233,22 +233,22 @@ export const SoundSource = () => {
 
 
   return (
-    <>
-    <div id="drum-machine">
-      {setKeyVolume()}
-      <div className="wrapper">
-        <Keyboard sounds={sounds} play={play} power={power} deactivateAudio={deactivateAudio} />
-        <DrumControl 
-          stop={stop}
-          power={power}
-          volume={volume} 
-          name={soundName || soundsOption[soundType]} 
-          changeSoundGroup={changeSoundGroup}
-          handleVolumeChange={handleVolumeChange} 
-         />
+    <Col>
+      <div id="drum-machine">
+        {setKeyVolume()}
+        <div className="wrapper">
+          <Keyboard sounds={sounds} play={play} power={power} deactivateAudio={deactivateAudio} />
+          <DrumControl 
+            stop={stop}
+            power={power}
+            volume={volume} 
+            name={soundName || soundsOption[soundType]} 
+            changeSoundGroup={changeSoundGroup}
+            handleVolumeChange={handleVolumeChange} 
+          />
+        </div>
       </div>
-    </div>
-    </>
+    </Col>
   )
 }
 export default SoundSource
